@@ -1,0 +1,115 @@
+.container-parent{
+    display: flex;
+}
+.filter-search{
+    min-width: 50%;
+}
+.search-type1{
+    margin-top:auto;
+    max-width: 25%;
+    margin-left: 10px;
+    position: relative;
+}
+.search-type1 select,.search-type2 select{
+    padding:7px;
+}
+.search-type2:before,.search-type1:before {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #222;
+}
+
+.search-type2:after,.search-type1:after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 18px;
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #fff;
+}
+.search-type2{
+    margin-top:auto;
+    max-width: 25%;
+    margin-left: 10px;
+    position: relative;
+}
+.pokelist{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    
+}
+.pokeball{
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+    vertical-align: middle;
+    margin-left:15px;
+}
+.poke-details{
+    display: inline-block;
+    width: 80%;
+    vertical-align: middle;
+}
+.pokecard{
+    display: block;
+    width: 28%;
+    background: #fff;
+    margin: 10px;
+    border-radius: 5px;
+    padding:10px 5px;
+}
+
+.poke-name{
+    text-align: center;
+    font-weight: bold;
+    text-transform: capitalize;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.poke-num{
+    text-align: center;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.poke-image img{
+    width:30%;
+    margin:auto;
+}
+
+.poke-type{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0px 5%;
+}
+.poke-type1,.poke-type2{
+    text-align: center;
+    font-weight: bold;
+    text-transform: capitalize;
+    border:1px solid black;
+    border-radius: 5px;
+    font-size: 10px;
+    padding:3px 5px;
+}
+.type-select{
+    cursor: pointer;
+}
+.type-option{
+    cursor: pointer;
+}
+
+.pokecard.caught{
+    background-color: rgb(47, 182, 47);
+}
