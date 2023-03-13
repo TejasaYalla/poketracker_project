@@ -50,7 +50,7 @@ export default class PokemonListContainer extends React.Component<
   Props,
   State
 > {
-  state = { value: "", filteredList: [], type1: "", type2: "", caught: 0 };
+  state = { value: "",  filteredList: [], type1: "", type2: "", caught: 0 };
 
   showFilteredList() {
 
@@ -65,9 +65,13 @@ export default class PokemonListContainer extends React.Component<
     
     const filtered = pokemonList.filter((entry) => {
       var filter = true
+      if (Number.isInteger(parseInt(this.state.value))){
+        filter = filter &&(entry.dex_number ==parseInt(this.state.value))
+      }else{
       if(this.state.value!=""){
         filter = entry.name.startsWith(this.state.value)
       }
+    }
       if(this.state.type1!=""){
         filter = filter && (entry.type_1 == this.state.type1)
       }
