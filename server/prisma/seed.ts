@@ -16,6 +16,7 @@ async function main() {
         type_1: pokemon.type_1,
         type_2: pokemon.type_2,
         image_url: pokemon.image_url,
+        caught: false
       },
       update: {
         dex_number: pokemon.dex_number,
@@ -23,6 +24,7 @@ async function main() {
         type_1: pokemon.type_1,
         type_2: pokemon.type_2,
         image_url: pokemon.image_url,
+        caught: false
       },
     });
   }
@@ -36,12 +38,36 @@ async function main() {
       first_name: "Samuel",
       last_name: "Oak",
       password: "pokemon4eva1996!",
+      is_admin: true
+
     },
     update: {
       email: "samuelOak@pallettownlab.com",
       first_name: "Samuel",
       last_name: "Oak",
       password: "pokemon4eva1996!",
+      is_admin: true
+    },
+  });
+
+  await prisma.user.upsert({
+    where: {
+      email: "tejasa@pallettownlab.com",
+    },
+    create: {
+      email: "tejasa@pallettownlab.com",
+      first_name: "tejasa",
+      last_name: "yalla",
+      password: "pokemon4eva1996!",
+      is_admin: false
+      
+    },
+    update: {
+      email: "tejasa@pallettownlab.com",
+      first_name: "tejasa",
+      last_name: "yalla",
+      password: "pokemon4eva1996!",
+      is_admin: false
     },
   });
 }

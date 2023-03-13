@@ -5,7 +5,8 @@ CREATE TABLE "Pokemon" (
     "dex_number" INTEGER NOT NULL,
     "type_1" TEXT NOT NULL,
     "type_2" TEXT,
-    "image_url" TEXT
+    "image_url" TEXT,
+    "caught" BOOLEAN DEFAULT "false"
 );
 
 -- CreateTable
@@ -14,7 +15,8 @@ CREATE TABLE "User" (
     "first_name" TEXT NOT NULL,
     "last_name" TEXT NOT NULL,
     "email" TEXT NOT NULL,
-    "password" TEXT NOT NULL
+    "password" TEXT NOT NULL,
+    "is_admin" BOOLEAN 
 );
 
 -- CreateIndex
